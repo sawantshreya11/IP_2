@@ -1,0 +1,250 @@
+/* CSS Variables */
+:root {
+  --primary-color: #337ab7;
+  --secondary-color: #23527c;
+  --font-main: 'Arial, sans-serif';
+}
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, rgb(176, 205, 250), rgb(244, 188, 216));
+  transition: all 0.3s ease;
+  animation: fadeIn 5s ease-in-out;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+  margin-bottom: 0.5em;
+  color: #570707;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  animation: slideInFromLeft 3s ease-out;
+}
+
+h1 {
+  font-size: 3.5em;
+  text-align: center;
+  color: rgb(77, 9, 9);
+}
+
+h2 {
+  font-size: 2.5em;
+  color: rgb(83, 14, 14);
+}
+
+h3 {
+  font-size: 2em;
+  color: #551310;
+}
+
+h4 {
+  font-size: 1.75em;
+  color: #23527c;
+}
+
+h5 {
+  font-size: 1.5em;
+  color: #337ab7;
+}
+
+h6 {
+  font-size: 1.25em;
+  color: #23527c;
+}
+
+/* Anchor Styles */
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Header Styles */
+header {
+  background-color: #308fc6;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(115, 106, 234, 0.2);
+  animation: fadeIn 2s ease-in-out;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header figure {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+}
+
+header figcaption {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #308fc6;
+  padding: 0.5em;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: slideInFromRight 6s ease-out;
+}
+
+nav a {
+  color: #fff;
+  margin-right: 1em;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+/* Main Content Styles */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+  padding: 2em;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  background-color: #fff;
+  padding: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Table Styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+/* Audio and Video Styles */
+audio, video {
+  width: 100%;
+  height: 100%;
+  margin: 1em 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  object-position: center;
+}
+audio {
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  height: 50px;
+}
+
+/* Pseudo-Elements and Pseudo-Classes */
+::selection {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #337ab7;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #23527c;
+}
+
+/* Small Font Style */
+small {
+  color: brown;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+/* Keyframe Animations */
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide In from Left */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide In from Right */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
